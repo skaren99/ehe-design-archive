@@ -1,0 +1,17 @@
+node_modules/
+target/
+.env
+.env.*
+!.env.example
+work/
+data/
+uploads/
+*.sqlite*
+*.db
+*.log
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+*.pem
+*.key

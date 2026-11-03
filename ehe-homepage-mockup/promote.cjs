@@ -1,0 +1,23 @@
+const fs=require('node:fs'),path=require('node:path');
+const root='C:/Users/Karen/Documents/Codex/2026-09-20/bui',dist=path.join(root,'dist');
+const mock=fs.readFileSync(path.join(__dirname,'index.html'),'utf8');
+const css=mock.match(/<style>([\s\S]*?)<\/style>/)[1];
+let markup=mock.match(/<main>([\s\S]*?)<\/main>/)[1].replaceAll('http://127.0.0.1:4173','').replace('src="wedding.jpg"','src="/wedding.jpg"');
+markup=markup.replace('<div class="content-layer">','<div class="content-layer">');
+const home=`function home(){document.body.classList.add('photo-home');const style=document.createElement('link');style.rel='stylesheet';style.href='/homepage.css';document.head.append(style);const box=document.createElement('div');box.innerHTML=${JSON.stringify(markup)};box.querySelectorAll('[data-et]').forEach(n=>n.textContent=n.dataset[lang]);box.querySelectorAll('[data-path]').forEach(n=>n.href=url('/'+n.dataset.path+'/'));return box.innerHTML}\n`;
+let app=fs.readFileSync(path.join(dist,'app.js'),'utf8');
+app=app.replace(/function home\(\)\{[\s\S]*?(?=function services\(\))/,home);
+app=app.replace("paths=['/','/services/','/rentals/','/contact/']","paths=['/','/services/','/rentals/','/contact/','/portfolio/']");
+app=app.replace("t('Kontakt','Contact')][i]","t('Kontakt','Contact'),t('Portfoolio','Portfolio')][i]").replace('[home,services,rentals,contact][page]()','[home,services,rentals,contact,portfolio][page]()');
+app=app.replace("<p class=\"small\">${t('Inspiratsioonifoto','Inspiration photo')}: <a href=\"https://www.pexels.com/photo/white-flowers-on-the-table-14312933/\">cemre kırlangıç / Pexels</a></p>",'');
+const portfolio=`
+function portfolio(){return \`<section class="page-heading"><span class="eyebrow">EHE EVENTS · \${t('PORTFOOLIO','PORTFOLIO')}</span><h1>\${t('Ehedad hetked.<br><em>Päris emotsioonid.</em>','Genuine moments.<br><em>Real emotions.</em>')}</h1><p>\${t('Hetked, mille juurde tahaks tagasi tulla.','Moments worth returning to.')}</p></section><section class="section portfolio-gallery"><figure><a href="/wedding.jpg" target="_blank" aria-label="\${t('Ava pulmafoto','Open wedding photograph')}"><img src="/wedding.jpg" alt="\${t('Pulmapaar hobustega kuldses õhtuvalguses','Wedding couple with horses in golden evening light')}" loading="lazy"></a><figcaption><span class="eyebrow">\${t('PULMAD','WEDDINGS')}</span><h2>\${t('Koos. Just selles hetkes.','Together. In this moment.')}</h2></figcaption></figure></section><section class="section portfolio-contact"><h2>\${t('Milline on teie lugu?','What is your story?')}</h2><p>\${t('Loome teie päeva ümber ruumi ehedatele hetkedele.','Let’s make room for genuine moments on your day.')}</p>\${link('/contact/',t('Räägime teie päevast','Let’s talk about your day'))}</section>\`}
+`;
+app=portfolio+app;
+fs.writeFileSync(path.join(dist,'app.js'),app);
+fs.writeFileSync(path.join(dist,'homepage.css'),css+'\nheader .brand span{display:block;font-family:DM Sans,sans-serif;letter-spacing:5px;font-size:9px;text-align:center;margin:0}header .brand{line-height:1}header nav a{color:white}header nav a.active{border:0}header .languages{margin-left:0}body.photo-home #main{max-width:none;padding:0}body.photo-home .hero{display:block;max-width:none;margin:0;padding:0}body.photo-home header{border:0}body.photo-home .hero-copy{padding:0;background:none}body.photo-home .hero img{border-radius:0}body.photo-home .intro{background:transparent}body.photo-home footer{max-width:none;margin:0}\n');
+fs.copyFileSync(path.join(__dirname,'wedding.jpg'),path.join(dist,'wedding.jpg'));
+fs.mkdirSync(path.join(dist,'portfolio'),{recursive:true});fs.copyFileSync(path.join(dist,'services','index.html'),path.join(dist,'portfolio','index.html'));
+fs.appendFileSync(path.join(dist,'features.css'),'\n.portfolio-gallery figure{margin:0}.portfolio-gallery img{display:block;width:100%;max-height:850px;object-fit:cover;object-position:center 40%}.portfolio-gallery figcaption{padding:28px 0}.portfolio-gallery h2{font-size:42px;margin:12px 0}.portfolio-contact{text-align:center}header nav{margin-left:auto}header .languages{margin-left:32px}@media(max-width:700px){header nav{flex-wrap:wrap;justify-content:flex-end;gap:14px}header .languages{margin-left:0}}\n');
+const adminPath=path.join(dist,'admin','admin.js');let admin=fs.readFileSync(adminPath,'utf8');admin=admin.replace('<option value="/contact/">Kontakt</option>','<option value="/contact/">Kontakt</option><option value="/portfolio/">Portfoolio</option>');fs.writeFileSync(adminPath,admin);
+console.log('Homepage promoted; bilingual portfolio and admin text editing added.');

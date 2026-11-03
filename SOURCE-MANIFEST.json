@@ -1,0 +1,232 @@
+[
+  {
+    "source": "C:\\Users\\Karen\\Documents\\Codex\\2026-09-20\\bui\\.gitignore",
+    "archive": "original-website/.gitignore",
+    "sha256": "d34350d90bdf55eb658885f33e113a1035ec29478df33b328c993a599131b3e0"
+  },
+  {
+    "source": "C:\\Users\\Karen\\Documents\\Codex\\2026-09-20\\bui\\admin-server.cjs",
+    "archive": "original-website/admin-server.cjs",
+    "sha256": "2f869019827de25188f5b77d861737592d1ed53a044b3c8fd2d33a17084fd09e"
+  },
+  {
+    "source": "C:\\Users\\Karen\\Documents\\Codex\\2026-09-20\\bui\\booking-store.cjs",
+    "archive": "original-website/booking-store.cjs",
+    "sha256": "76e54dcf724edba4bf09ddb907702f236503affcc974bfc23aeafbad9ef664d6"
+  },
+  {
+    "source": "C:\\Users\\Karen\\Documents\\Codex\\2026-09-20\\bui\\catalog.json",
+    "archive": "original-website/catalog.json",
+    "sha256": "3bdeb7fe7833642849289fcd2a91075c8220bd4329f97171cf0ed0f8f893e481"
+  },
+  {
+    "source": "C:\\Users\\Karen\\Documents\\Codex\\2026-09-20\\bui\\README.md",
+    "archive": "original-website/README.md",
+    "sha256": "cc2cdf4d9146323a9d2b4570da980fff214f265666b2620dd32be720d32617da"
+  },
+  {
+    "source": "C:\\Users\\Karen\\Documents\\Codex\\2026-09-20\\bui\\server.cjs",
+    "archive": "original-website/server.cjs",
+    "sha256": "3640d6acc9f566dac1a3fbb95011dfd881a017a6022327a627f7f4fd503aa5c9"
+  },
+  {
+    "source": "C:\\Users\\Karen\\Documents\\Codex\\2026-09-20\\bui\\dist\\app.js",
+    "archive": "original-website/dist/app.js",
+    "sha256": "5867dd9dd6b7a51d375438bfe286dbabb4b2c3df399973220f6b58f948e7bd6b"
+  },
+  {
+    "source": "C:\\Users\\Karen\\Documents\\Codex\\2026-09-20\\bui\\dist\\calculator.js",
+    "archive": "original-website/dist/calculator.js",
+    "sha256": "5fc65d8ad3415d01ee2e876da45f6e65ad51018236122b5f94a219341dc511b5"
+  },
+  {
+    "source": "C:\\Users\\Karen\\Documents\\Codex\\2026-09-20\\bui\\dist\\features.css",
+    "archive": "original-website/dist/features.css",
+    "sha256": "23c1bb0a5a058220fba8fcab41dadb36dcf527da19c4948f0e3b5407f7bf8934"
+  },
+  {
+    "source": "C:\\Users\\Karen\\Documents\\Codex\\2026-09-20\\bui\\dist\\homepage.css",
+    "archive": "original-website/dist/homepage.css",
+    "sha256": "f0e66185e5ead5f669803fa6f102ebc290e4d91eda98c60d5c51da77505b3352"
+  },
+  {
+    "source": "C:\\Users\\Karen\\Documents\\Codex\\2026-09-20\\bui\\dist\\index.html",
+    "archive": "original-website/dist/index.html",
+    "sha256": "21d1a0ac6fd7c4168ae0a9fbc3f9a39875445de9d02410ec4dec662f045af71c"
+  },
+  {
+    "source": "C:\\Users\\Karen\\Documents\\Codex\\2026-09-20\\bui\\dist\\logic.js",
+    "archive": "original-website/dist/logic.js",
+    "sha256": "3b1fcc3764774379bb478b00494f2ded089fdb92ed8fe265268576a67b75bc3f"
+  },
+  {
+    "source": "C:\\Users\\Karen\\Documents\\Codex\\2026-09-20\\bui\\dist\\public-editor.js",
+    "archive": "original-website/dist/public-editor.js",
+    "sha256": "929206a44df8e6d39899c0b6994a10a23b273ad738d318b2e090168d9aa53b64"
+  },
+  {
+    "source": "C:\\Users\\Karen\\Documents\\Codex\\2026-09-20\\bui\\dist\\rentals.js",
+    "archive": "original-website/dist/rentals.js",
+    "sha256": "c003c0ebfa1a68de621a9fb42d5e03e6a132f9768f818eb30f4eb7f169ee7196"
+  },
+  {
+    "source": "C:\\Users\\Karen\\Documents\\Codex\\2026-09-20\\bui\\dist\\style.css",
+    "archive": "original-website/dist/style.css",
+    "sha256": "a1a8f4cca18d6afa01816e51d2c8035438078d7faea89e925ffa4c0bcbde92e6"
+  },
+  {
+    "source": "C:\\Users\\Karen\\Documents\\Codex\\2026-09-20\\bui\\dist\\wedding.jpg",
+    "archive": "original-website/dist/wedding.jpg",
+    "sha256": "7db76391ecf09a2cc6a00654b88c474078c24912fd136fa2fb6e540263c925f4"
+  },
+  {
+    "source": "C:\\Users\\Karen\\Documents\\Codex\\2026-09-20\\bui\\dist\\admin\\admin.css",
+    "archive": "original-website/dist/admin/admin.css",
+    "sha256": "2c8e7c40b108470d358ca5386c269b0100e583fe028659b77f7f7649a5185171"
+  },
+  {
+    "source": "C:\\Users\\Karen\\Documents\\Codex\\2026-09-20\\bui\\dist\\admin\\admin.js",
+    "archive": "original-website/dist/admin/admin.js",
+    "sha256": "bba47237572238c81f611886ee4cf0a25dbb25bbbde7caf1b8d417f2a207daa1"
+  },
+  {
+    "source": "C:\\Users\\Karen\\Documents\\Codex\\2026-09-20\\bui\\dist\\admin\\index.html",
+    "archive": "original-website/dist/admin/index.html",
+    "sha256": "39bc25a8f1a9062f4000bfc13f183fd442ad33eb34f07fdc5d281ba19e0030af"
+  },
+  {
+    "source": "C:\\Users\\Karen\\Documents\\Codex\\2026-09-20\\bui\\dist\\contact\\index.html",
+    "archive": "original-website/dist/contact/index.html",
+    "sha256": "21d1a0ac6fd7c4168ae0a9fbc3f9a39875445de9d02410ec4dec662f045af71c"
+  },
+  {
+    "source": "C:\\Users\\Karen\\Documents\\Codex\\2026-09-20\\bui\\dist\\portfolio\\index.html",
+    "archive": "original-website/dist/portfolio/index.html",
+    "sha256": "21d1a0ac6fd7c4168ae0a9fbc3f9a39875445de9d02410ec4dec662f045af71c"
+  },
+  {
+    "source": "C:\\Users\\Karen\\Documents\\Codex\\2026-09-20\\bui\\dist\\portfolio\\wedding\\index.html",
+    "archive": "original-website/dist/portfolio/wedding/index.html",
+    "sha256": "21d1a0ac6fd7c4168ae0a9fbc3f9a39875445de9d02410ec4dec662f045af71c"
+  },
+  {
+    "source": "C:\\Users\\Karen\\Documents\\Codex\\2026-09-20\\bui\\dist\\rentals\\index.html",
+    "archive": "original-website/dist/rentals/index.html",
+    "sha256": "21d1a0ac6fd7c4168ae0a9fbc3f9a39875445de9d02410ec4dec662f045af71c"
+  },
+  {
+    "source": "C:\\Users\\Karen\\Documents\\Codex\\2026-09-20\\bui\\dist\\services\\index.html",
+    "archive": "original-website/dist/services/index.html",
+    "sha256": "21d1a0ac6fd7c4168ae0a9fbc3f9a39875445de9d02410ec4dec662f045af71c"
+  },
+  {
+    "source": "C:\\Users\\Karen\\OneDrive\\Documents\\ChatGPT\\Pulmaprojekt\\pulmaplaan\\admin.css",
+    "archive": "pulmaplaan/admin.css",
+    "sha256": "53904182b590457d9907a43c6671610da7dbfe7555c23128aa8f8a364675c37c"
+  },
+  {
+    "source": "C:\\Users\\Karen\\OneDrive\\Documents\\ChatGPT\\Pulmaprojekt\\pulmaplaan\\admin.js",
+    "archive": "pulmaplaan/admin.js",
+    "sha256": "5b728df00988fbdfefb6b23b8b5de900e9c6a5f465e8a304f2836e94d54e1bd9"
+  },
+  {
+    "source": "C:\\Users\\Karen\\OneDrive\\Documents\\ChatGPT\\Pulmaprojekt\\pulmaplaan\\apply-brand-colors.mjs",
+    "archive": "pulmaplaan/apply-brand-colors.mjs",
+    "sha256": "9e1f39452c6beff5f8ce569fb0ea49698a93024fdbabc6b3b8c5dc9f10de281b"
+  },
+  {
+    "source": "C:\\Users\\Karen\\OneDrive\\Documents\\ChatGPT\\Pulmaprojekt\\pulmaplaan\\BRAND.md",
+    "archive": "pulmaplaan/BRAND.md",
+    "sha256": "c72b7cf0fc9f9d91984267eed695a97236e2b2df6c23d1c40c7ad1c740d54e64"
+  },
+  {
+    "source": "C:\\Users\\Karen\\OneDrive\\Documents\\ChatGPT\\Pulmaprojekt\\pulmaplaan\\build-admin.mjs",
+    "archive": "pulmaplaan/build-admin.mjs",
+    "sha256": "43127da36626cb9668b38524d811936e3a16dabe3074eb9f8d8a055952226d7e"
+  },
+  {
+    "source": "C:\\Users\\Karen\\OneDrive\\Documents\\ChatGPT\\Pulmaprojekt\\pulmaplaan\\polish-admin.mjs",
+    "archive": "pulmaplaan/polish-admin.mjs",
+    "sha256": "61ce4c05328a6c8946b4770b62dce7e713ae1496b7e696951aef3af8ce8712ac"
+  },
+  {
+    "source": "C:\\Users\\Karen\\OneDrive\\Documents\\ChatGPT\\Pulmaprojekt\\pulmaplaan\\update-client.mjs",
+    "archive": "pulmaplaan/update-client.mjs",
+    "sha256": "99605ad1206bfec128124b7519ccf81e55f62a842430e363d53486ab11856018"
+  },
+  {
+    "source": "C:\\Users\\Karen\\OneDrive\\Documents\\ChatGPT\\Pulmaprojekt\\pulmaplaan\\verify-flows.mjs",
+    "archive": "pulmaplaan/verify-flows.mjs",
+    "sha256": "fd4dc6e694740187016a12f59713007f12c1b718e863dc1e836be62b539e525e"
+  },
+  {
+    "source": "C:\\Users\\Karen\\OneDrive\\Documents\\ChatGPT\\Pulmaprojekt\\pulmaplaan\\dist\\admin.html",
+    "archive": "pulmaplaan/dist/admin.html",
+    "sha256": "aa267447587d9bb0bf5a9be019783058192cc8ff682da1946c4c47765ca34c9a"
+  },
+  {
+    "source": "C:\\Users\\Karen\\OneDrive\\Documents\\ChatGPT\\Pulmaprojekt\\pulmaplaan\\dist\\index.html",
+    "archive": "pulmaplaan/dist/index.html",
+    "sha256": "ccab14a8563050f32ff4d5d250b6dab9847024dcc1a49efbc73f188787cbe01e"
+  },
+  {
+    "source": "C:\\Users\\Karen\\OneDrive\\Documents\\ChatGPT\\Pulmaprojekt\\ehe-homepage-mockup\\index.html",
+    "archive": "ehe-homepage-mockup/index.html",
+    "sha256": "6d2c79162ecc07dc412d675faa001ca2e7730032d98ec4534534510d1029eb31"
+  },
+  {
+    "source": "C:\\Users\\Karen\\OneDrive\\Documents\\ChatGPT\\Pulmaprojekt\\ehe-homepage-mockup\\portfolio-cards.cjs",
+    "archive": "ehe-homepage-mockup/portfolio-cards.cjs",
+    "sha256": "c84055b3842a83c14d634eb16888a42ca1108eace2b1a68bdbdb645309c0e8e2"
+  },
+  {
+    "source": "C:\\Users\\Karen\\OneDrive\\Documents\\ChatGPT\\Pulmaprojekt\\ehe-homepage-mockup\\promote.cjs",
+    "archive": "ehe-homepage-mockup/promote.cjs",
+    "sha256": "22b13d63e8513fea62ef4a4f46b64d9afdc37ec2e3773328c45fe4c5a11683b9"
+  },
+  {
+    "source": "C:\\Users\\Karen\\OneDrive\\Documents\\ChatGPT\\Pulmaprojekt\\ehe-homepage-mockup\\server.cjs",
+    "archive": "ehe-homepage-mockup/server.cjs",
+    "sha256": "da6a260de78ff459dd0395584a72c21e733332c900225ab28ed68d72b8a7bdd3"
+  },
+  {
+    "source": "C:\\Users\\Karen\\OneDrive\\Documents\\ChatGPT\\Pulmaprojekt\\ehe-homepage-mockup\\wedding-detail.cjs",
+    "archive": "ehe-homepage-mockup/wedding-detail.cjs",
+    "sha256": "25e0cf2b783d1397d1cc47fffbb0e092e933d37ce901931e27499d30d1de110c"
+  },
+  {
+    "source": "C:\\Users\\Karen\\OneDrive\\Documents\\ChatGPT\\Pulmaprojekt\\ehe-homepage-mockup\\wedding.jpg",
+    "archive": "ehe-homepage-mockup/wedding.jpg",
+    "sha256": "7db76391ecf09a2cc6a00654b88c474078c24912fd136fa2fb6e540263c925f4"
+  },
+  {
+    "source": "C:\\Users\\Karen\\OneDrive\\Documents\\ChatGPT\\Pulmaprojekt\\Meie-paev-admin-prototuup.html",
+    "archive": "mockups/Meie-paev-admin-prototuup.html",
+    "sha256": "aa267447587d9bb0bf5a9be019783058192cc8ff682da1946c4c47765ca34c9a"
+  },
+  {
+    "source": "C:\\Users\\Karen\\OneDrive\\Documents\\ChatGPT\\Pulmaprojekt\\Meie-paev-prototuup.html",
+    "archive": "mockups/Meie-paev-prototuup.html",
+    "sha256": "77ffa285ee39dbb24da6d25f45c207305e6f7850f47e9ac9949c352a5784a05b"
+  },
+  {
+    "source": "C:\\Users\\Karen\\OneDrive\\Documents\\ChatGPT\\Pulmaprojekt\\pulmakorraldaja-admin-eelvaade.png",
+    "archive": "mockups/pulmakorraldaja-admin-eelvaade.png",
+    "sha256": "ddc55a243507ca9383c55bf9128585ba923434d0e8aed84e75d8ace0f5aa31d1"
+  },
+  {
+    "source": "C:\\Users\\Karen\\OneDrive\\Documents\\ChatGPT\\Pulmaprojekt\\pulmaplaan-eelvaade.png",
+    "archive": "mockups/pulmaplaan-eelvaade.png",
+    "sha256": "953b70b46af12fd6a5d29486a843c5b8eb7d7bab0400b954e0c8041359c59618"
+  },
+  {
+    "source": "C:\\Users\\Karen\\OneDrive\\Documents\\ChatGPT\\Pulmaprojekt\\pulmaplaan-ehe-adminvaade.png",
+    "archive": "mockups/pulmaplaan-ehe-adminvaade.png",
+    "sha256": "04211b85f8f221142b283f3d621d6cad35106596d04fbcd31280b841947116fe"
+  },
+  {
+    "source": "C:\\Users\\Karen\\OneDrive\\Documents\\ChatGPT\\Pulmaprojekt\\pulmaplaan-ehe-kliendivaade.png",
+    "archive": "mockups/pulmaplaan-ehe-kliendivaade.png",
+    "sha256": "f7ac75beb4117e73135aa29cec95a2bb055ad12218e9928538c6d5aee532211d"
+  }
+]

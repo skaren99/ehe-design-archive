@@ -1,0 +1,35 @@
+import fs from 'node:fs';
+import vm from 'node:vm';
+import assert from 'node:assert/strict';
+import {randomUUID} from 'node:crypto';
+function boot(html,storage=new Map(),search=''){
+ const elements={};const handlers={};let blob;
+ const el=()=>({innerHTML:'',style:{},focus(){},click(){},scrollTop:0});
+ const document={activeElement:null,body:el(),documentElement:{outerHTML:html.replace(/^<!doctype html>\s*/i,'')},getElementById(id){return elements[id]??=el()},querySelector(){return el()},addEventListener(n,fn){handlers[n]=fn},createElement:el};
+ const context=vm.createContext({document,console,structuredClone,URLSearchParams,Intl,Date,crypto:{randomUUID},FormData:class{constructor(form){return Object.entries(form.values)}},Blob,URL:{createObjectURL(b){blob=b;return 'blob:test'},revokeObjectURL(){}},setTimeout(){},clearTimeout(){},location:{search,reload(){}},localStorage:{getItem(k){return storage.get(k)||null},setItem(k,v){storage.set(k,v)}},window:{addEventListener(){},scrollTo(){}}});
+ vm.runInContext(html.match(/<script>([\s\S]*)<\/script>/)[1],context);
+ return {run:s=>vm.runInContext(s,context),storage,elements,submit:(id,values)=>handlers.submit({preventDefault(){},target:{id,values}}),export:async(name)=>{vm.runInContext(name+'()',context);return blob.text()}};
+}
+const adminHtml=fs.readFileSync('dist/admin.html','utf8'),clientHtml=fs.readFileSync('dist/index.html','utf8');
+const a=boot(adminHtml);const originalPrimary=a.storage.get('meie-paev-prototype-v1');
+a.run("projectForm();");a.submit('project-form',{names:'Testpaar & Kaaslane',date:'2027-07-10',venue:'Testmõis',guests:'40',budget:'12000',stage:'Planeerimisel',email:'pair@example.com',phone:'',note:'AINULT_KORRALDAJA_MÄRKUS'});
+const wid=a.run('admin.weddings.at(-1).id');
+a.run(`taskForm('${wid}');`);a.submit('task-form',{wid,title:'Uus ühine tegevus',date:'2026-11-09',assignee:'Karen',group:'planner',status:'Töös',category:'Üldine',description:'Tegevuse kirjeldus'});
+const tid=a.run(`records['${wid}'].tasks[0].id`);
+a.submit('comment-form',{text:'ÜHINE_KOMMENTAAR'});
+assert.equal(a.storage.get('meie-paev-prototype-v1'),originalPrimary,'Other wedding must not change primary records');
+let c=boot(clientHtml,a.storage,'?wedding='+wid);
+assert(c.elements.app.innerHTML.includes('Testpaar &amp; Kaaslane'));
+assert(c.elements.app.innerHTML.includes('ÜHINE_KOMMENTAAR'));
+assert(!c.elements.app.innerHTML.includes('AINULT_KORRALDAJA_MÄRKUS'));
+const clientExport=await c.export('download');
+assert(!clientExport.includes('AINULT_KORRALDAJA_MÄRKUS'));
+assert(!clientExport.includes('Kinnitage külaliste esialgne nimekiri'),'Export must not include another wedding seed');
+const ex=boot(clientExport);assert(ex.elements.app.innerHTML.includes('Testpaar &amp; Kaaslane'));assert(ex.elements.app.innerHTML.includes('ÜHINE_KOMMENTAAR'));
+assert(!ex.elements.app.innerHTML.includes('href="admin.html"'));
+const adminExport=await a.export('exportAdmin');const exported=boot(adminExport);
+assert.equal(exported.run('admin.weddings.at(-1).note'),'AINULT_KORRALDAJA_MÄRKUS');
+exported.run("admin.weddings.at(-1).names='Muudetud paar';persist();");
+const reloaded=boot(adminExport,exported.storage);assert.equal(reloaded.run('admin.weddings.at(-1).names'),'Muudetud paar');
+assert.equal(exported.storage.has('meie-paev-prototype-v1'),false,'Admin export must use isolated storage');
+console.log('PASS: project creation, task/comment creation, wedding isolation, client data sharing, private-note exclusion, client export, admin export and reload persistence.');
